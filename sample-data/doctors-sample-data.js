@@ -5,8 +5,7 @@ const doctors = [
     lastName: "Hill",
     gender: "Male",
     email: "dean@mock.com",
-    hospital: "SKKN",
-    specialty: "PDTN"
+    hospital: "SKKN"
   },
   {
     id: 2,
@@ -14,8 +13,7 @@ const doctors = [
     lastName: "Sekgothe",
     gender: "Female",
     email: "lufuno@mock.com",
-    hospital: "PLKH",
-    specialty: "CDGT"
+    hospital: "PLKH"
   },
   {
     id: 3,
@@ -23,8 +21,7 @@ const doctors = [
     lastName: "Phago",
     gender: "Female",
     email: "refilwe@mock.com",
-    hospital: "DNDH",
-    specialty: "URLG"
+    hospital: "DNDH"
   },
   {
     id: 4,
@@ -32,8 +29,7 @@ const doctors = [
     lastName: "Sibika",
     gender: "Female",
     email: "seba@mock.com",
-    hospital: "DNDH",
-    specialty: "CDGT"
+    hospital: "DNDH"
   },
   {
     id: 5,
@@ -41,8 +37,7 @@ const doctors = [
     lastName: "Mamani",
     gender: "Female",
     email: "katlego@mock.com",
-    hospital: "SKKN",
-    specialty: "PDTN"
+    hospital: "SKKN"
   },
   {
     id: 6,
@@ -50,8 +45,7 @@ const doctors = [
     lastName: "Leseme",
     gender: "Female",
     email: "idah@mock.com",
-    hospital: "MSSH",
-    specialty: "PDTN"
+    hospital: "MSSH"
   },
   {
     id: 7,
@@ -59,8 +53,7 @@ const doctors = [
     lastName: "Shadung",
     gender: "Female",
     email: "jessica@mock.com",
-    hospital: "DNDH",
-    specialty: "DMTG"
+    hospital: "DNDH"
   },
   {
     id: 8,
@@ -68,8 +61,7 @@ const doctors = [
     lastName: "Seoka",
     gender: "Male",
     email: "tshego@mock.com",
-    hospital: "SKKN",
-    specialty: "CDGT"
+    hospital: "SKKN"
   },
   {
     id: 9,
@@ -77,8 +69,7 @@ const doctors = [
     lastName: "Mokgohloa",
     gender: "Male",
     email: "jethro@mock.com",
-    hospital: "PLKH",
-    specialty: "URLG"
+    hospital: "PLKH"
   },
   {
     id: 10,
@@ -86,8 +77,7 @@ const doctors = [
     lastName: "Munyangane",
     gender: "Female",
     email: "kgaogelo@mock.com",
-    hospital: "MSSH",
-    specialty: "DMTG"
+    hospital: "MSSH"
   },
   {
     id: 11,
@@ -95,8 +85,7 @@ const doctors = [
     lastName: "Ndlovu",
     gender: "Male",
     email: "mmadi@mock.com",
-    hospital: "BTLK",
-    specialty: "DMTG"
+    hospital: "BTLK"
   },
   {
     id: 12,
@@ -104,8 +93,7 @@ const doctors = [
     lastName: "Sekhosana",
     gender: "Female",
     email: "abigail@mock.com",
-    hospital: "NTNP",
-    specialty: "URLG"
+    hospital: "NTNP"
   },
   {
     id: 13,
@@ -113,8 +101,7 @@ const doctors = [
     lastName: "Deagrela",
     gender: "Female",
     email: "mmakosha@mock.com",
-    hospital: "SHPO",
-    specialty: "URLG"
+    hospital: "SHPO"
   },
   {
     id: 14,
@@ -122,8 +109,7 @@ const doctors = [
     lastName: "Maruma",
     gender: "Female",
     email: "dorcus@mock.com",
-    hospital: "MRBJ",
-    specialty: "DMTG"
+    hospital: "MRBJ"
   },
   {
     id: 15,
@@ -131,8 +117,7 @@ const doctors = [
     lastName: "Mophosho",
     gender: "Male",
     email: "denzel@mock.com",
-    hospital: "NTNP",
-    specialty: "NRLG"
+    hospital: "NTNP"
   },
   {
     id: 16,
@@ -140,8 +125,7 @@ const doctors = [
     lastName: "Sehume",
     gender: "Female",
     email: "lerato@mock.com",
-    hospital: "SHPO",
-    specialty: "RDLG"
+    hospital: "SHPO"
   },
   {
     id: 17,
@@ -149,8 +133,7 @@ const doctors = [
     lastName: "Ndala",
     gender: "Male",
     email: "londokuhle@mock.com",
-    hospital: "BLYH",
-    specialty: "CDGT"
+    hospital: "BLYH"
   },
   {
     id: 18,
@@ -158,8 +141,7 @@ const doctors = [
     lastName: "Maosa",
     gender: "Male",
     email: "thovhedzo@mock.com",
-    hospital: "SHPO",
-    specialty: "RDLG"
+    hospital: "SHPO"
   },
   {
     id: 19,
@@ -167,8 +149,7 @@ const doctors = [
     lastName: "Dikana",
     gender: "Female",
     email: "reneilwe@mock.com",
-    hospital: "MRSB",
-    specialty: "NRLG"
+    hospital: "MRSB"
   },
   {
     id: 20,
@@ -176,8 +157,7 @@ const doctors = [
     lastName: "Sothobe",
     gender: "Female",
     email: "philicia@mock.com",
-    hospital: "BLMH",
-    specialty: "PSCT"
+    hospital: "BLMH"
   },
   {
     id: 21,
@@ -185,8 +165,7 @@ const doctors = [
     lastName: "Manaka",
     gender: "Male",
     email: "eddy@mock.com",
-    hospital: "SHPO",
-    specialty: "RDLG"
+    hospital: "SHPO"
   },
   {
     id: 22,
@@ -194,8 +173,7 @@ const doctors = [
     lastName: "Serumula",
     gender: "Male",
     email: "mathibela@mock.com",
-    hospital: "BLYH",
-    specialty: "NRLG"
+    hospital: "BLYH"
   },
   {
     id: 23,
@@ -203,8 +181,7 @@ const doctors = [
     lastName: "Leshabane",
     gender: "Male",
     email: "mpho@mock.com",
-    hospital: "BLMH",
-    specialty: "PSCT"
+    hospital: "BLMH"
   },
   {
     id: 24,
@@ -212,8 +189,7 @@ const doctors = [
     lastName: "Sebata",
     gender: "Male",
     email: "lehlohonolo@mock.com",
-    hospital: "VTPH",
-    specialty: "RDLG"
+    hospital: "VTPH"
   },
   {
     id: 25,
@@ -221,8 +197,7 @@ const doctors = [
     lastName: "Khoza",
     gender: "Male",
     email: "mpumi@mock.com",
-    hospital: "VTPH",
-    specialty: "PSCT"
+    hospital: "VTPH"
   }
 ];
 
