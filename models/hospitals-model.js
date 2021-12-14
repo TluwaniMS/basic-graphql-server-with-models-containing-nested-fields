@@ -1,5 +1,14 @@
-const { GraphQLInt, GraphQLList, GraphQLNonNull, GraphQLString, GraphQLObjectType } = require("graphql");
+const { GraphQLList, GraphQLNonNull, GraphQLString, GraphQLObjectType } = require("graphql");
+const { DoctorsModel } = require("./doctors-model");
 
-const hospitalsModel = new GraphQLObjectType({});
+const HospitalsModel = new GraphQLObjectType({
+  name: "Hospital",
+  fields: () => ({
+    hospitalName: { type: new GraphQLNonNull(GraphQLString) },
+    hospitalKey: { type: new GraphQLNonNull(GraphQLString) },
+    municipality: { type: new GraphQLNonNull(GraphQLString) },
+    doctors: { type: new GraphQLList(DoctorsModel) }
+  })
+});
 
-module.exports = { hospitalsModel };
+module.exports = { HospitalsModel };
