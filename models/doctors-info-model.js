@@ -1,6 +1,6 @@
 const { GraphQLInt, GraphQLString, GraphQLNonNull, GraphQLObjectType } = require("graphql");
 
-const doctorsInfoModel = new GraphQLObjectType({
+const DoctorsInfoModel = new GraphQLObjectType({
   name: "DoctorsInfo",
   fields: () => ({
     doctorsId: { type: new GraphQLNonNull(GraphQLInt) },
@@ -9,4 +9,4 @@ const doctorsInfoModel = new GraphQLObjectType({
   })
 });
 
-module.exports = { doctorsInfoModel };
+module.exports = { DoctorsInfoModel };
