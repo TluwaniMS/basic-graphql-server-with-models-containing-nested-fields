@@ -1,11 +1,14 @@
 const { GraphQLObjectType, GraphQLSchema } = require("graphql");
 const { getAllDoctorsQuery, getDoctorByIdQuery } = require("./queries/doctors-queries");
+const { getAllHospitalsQuery, getHospitalByHospitalKeyQuery } = require("./queries/hospitals-queries");
 
 const Query = new GraphQLObjectType({
   name: "RootQuery",
   fields: {
     getAllDoctors: getAllDoctorsQuery,
-    getDoctorById: getDoctorByIdQuery
+    getDoctorById: getDoctorByIdQuery,
+    getAllHospitals: getAllHospitalsQuery,
+    getHospitalByHospitalKey: getHospitalByHospitalKeyQuery
   }
 });
 
