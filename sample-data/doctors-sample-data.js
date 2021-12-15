@@ -1,4 +1,4 @@
-const doctors = [
+const Doctors = [
   {
     id: 1,
     firstName: "Dean",
@@ -201,4 +201,4 @@ const doctors = [
   }
 ];
 
-module.exports = { doctors };
+module.exports = { Doctors };

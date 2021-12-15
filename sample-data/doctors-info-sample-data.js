@@ -1,4 +1,4 @@
-const doctors_info = [
+const DoctorsInfo = [
   { doctorsId: 1, specialty: "Pediatrician", hospital: "Sekhukhune Private Hospital" },
   { doctorsId: 2, specialty: "Cardiologist", hospital: "Polokwane Hospital" },
   { doctorsId: 3, specialty: "Urologist", hospital: "dendron Health Centre" },
@@ -25,3 +25,5 @@ const doctors_info = [
   { doctorsId: 24, specialty: "Radiologist", hospital: "Vhatwanamba Private Health Care" },
   { doctorsId: 25, specialty: "Psychiatrist", hospital: "Vhatwanamba Private Health Care" }
 ];
+
+module.exports = { DoctorsInfo };

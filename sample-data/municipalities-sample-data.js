@@ -1,4 +1,4 @@
-const municipalities = [
+const Municipalities = [
   { municipalityName: "Blouberg Municipality", municipalityKey: "BLBG" },
   { municipalityName: "Capricorn Municipality", municipalityKey: "CPRN" },
   { municipalityName: "Ekhuruleni Municipality", municipalityKey: "EKRN" },
@@ -6,4 +6,4 @@ const municipalities = [
   { municipalityName: "Luonde Municipality", municipalityKey: "LNDE" }
 ];
 
-module.exports = { municipalities };
+module.exports = { Municipalities };
