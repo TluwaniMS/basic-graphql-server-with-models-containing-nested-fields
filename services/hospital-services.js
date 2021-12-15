@@ -6,4 +6,4 @@ const getHospital = (args) => Hospitals.filter((hospital) => hospital.hospitalKe
 
 const getDoctorsLinkedToHospital = (hospitalKey) => Doctors.filter((doctor) => doctor.hospital === hospitalKey);
 
-module.exports = {};
+module.exports = { getAllHospitals, getHospital, getDoctorsLinkedToHospital };

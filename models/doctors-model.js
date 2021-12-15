@@ -1,5 +1,6 @@
 const { GraphQLInt, GraphQLNonNull, GraphQLString, GraphQLObjectType } = require("graphql");
 const { DoctorsInfoModel } = require("./doctors-info-model");
+const { getDoctorsInfoLinkedToDoctor } = require("../services/doctor-services");
 
 const DoctorsModel = new GraphQLObjectType({
   name: "Doctor",
@@ -10,7 +11,12 @@ const DoctorsModel = new GraphQLObjectType({
     gender: { type: new GraphQLNonNull(GraphQLString) },
     email: { type: new GraphQLNonNull(GraphQLString) },
     hospital: { type: new GraphQLNonNull(GraphQLString) },
-    info: { type: DoctorsInfoModel }
+    info: {
+      type: DoctorsInfoModel,
+      resolve(parent, args) {
+        return getDoctorsInfoLinkedToDoctor(parent.id);
+      }
+    }
   })
 });
 

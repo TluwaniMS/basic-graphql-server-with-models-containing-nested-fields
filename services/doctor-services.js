@@ -6,4 +6,4 @@ const getDoctorById = (args) => Doctors.filter((doctor) => doctor.id === args.id
 
 const getDoctorsInfoLinkedToDoctor = (doctorsId) => DoctorsInfo.filter((doctor) => doctor.doctorsId === doctorsId);
 
-module.exports = {};
+module.exports = { getAllDoctors, getDoctorById, getDoctorsInfoLinkedToDoctor };

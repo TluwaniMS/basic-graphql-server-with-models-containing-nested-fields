@@ -8,4 +8,4 @@ const getMunicipality = (args) =>
 const getHospitalsLinkedToMunicipality = (municipalityKey) =>
   Hospitals.filter((hospital) => hospital.municipality === municipalityKey);
 
-module.exports = {};
+module.exports = { getAllMunicipalities, getMunicipality, getHospitalsLinkedToMunicipality };
