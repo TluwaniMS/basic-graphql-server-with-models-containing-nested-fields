@@ -6,6 +6,8 @@ const {
   getMunicipalityByMunicipalityKeyQuery
 } = require("./queries/municipalities-queries");
 
+const { deleteDoctorMutation } = require("./mutations/doctors-mutations");
+
 const Query = new GraphQLObjectType({
   name: "RootQuery",
   fields: {
@@ -20,7 +22,9 @@ const Query = new GraphQLObjectType({
 
 const Mutation = new GraphQLObjectType({
   name: "Mutation",
-  fields: {}
+  fields: {
+    deleteDoctorById: deleteDoctorMutation
+  }
 });
 
 module.exports = new GraphQLSchema({
