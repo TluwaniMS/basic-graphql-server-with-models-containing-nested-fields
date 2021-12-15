@@ -1,6 +1,10 @@
 const { GraphQLObjectType, GraphQLSchema } = require("graphql");
 const { getAllDoctorsQuery, getDoctorByIdQuery } = require("./queries/doctors-queries");
 const { getAllHospitalsQuery, getHospitalByHospitalKeyQuery } = require("./queries/hospitals-queries");
+const {
+  getAllMunicipalitiesQuery,
+  getMunicipalityByMunicipalityKeyQuery
+} = require("./queries/municipalities-queries");
 
 const Query = new GraphQLObjectType({
   name: "RootQuery",
@@ -8,7 +12,9 @@ const Query = new GraphQLObjectType({
     getAllDoctors: getAllDoctorsQuery,
     getDoctorById: getDoctorByIdQuery,
     getAllHospitals: getAllHospitalsQuery,
-    getHospitalByHospitalKey: getHospitalByHospitalKeyQuery
+    getHospitalByHospitalKey: getHospitalByHospitalKeyQuery,
+    getAllMunicipalities: getAllMunicipalitiesQuery,
+    getMunicipalityByMunicipalityKey: getMunicipalityByMunicipalityKeyQuery
   }
 });
 
