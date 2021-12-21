@@ -1,9 +1,17 @@
 const { Hospitals } = require("../sample-data/hospitals-sample-data");
 const { Doctors } = require("../sample-data/doctors-sample-data");
+const { updateDoctorsHospitalInfo } = require("./doctors-info-service");
 
 const getAllHospitals = () => Hospitals;
 const getHospital = (args) => Hospitals.filter((hospital) => hospital.hospitalKey === args.hospitalKey);
 
 const getDoctorsLinkedToHospital = (hospitalKey) => Doctors.filter((doctor) => doctor.hospital === hospitalKey);
 
-module.exports = { getAllHospitals, getHospital, getDoctorsLinkedToHospital };
+const deleteHospitalByHospitalKey = (args) => {
+  const selecteHospital = Hospitals.filter((hospital) => hospital.hospitalKey === args.hospitalKey)[0];
+  const hospitalsIndex = Hospitals.indexOf(selecteHospital);
+  updateDoctorsHospitalInfo(selecteHospital.hospitalName);
+  Hospitals.splice(hospitalsIndex, 1);
+};
+
+module.exports = { getAllHospitals, getHospital, getDoctorsLinkedToHospital, deleteHospitalByHospitalKey };

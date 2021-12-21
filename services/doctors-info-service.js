@@ -1,4 +1,5 @@
 const { DoctorsInfo } = require("../sample-data/doctors-info-sample-data");
+const { SupportingContentModel } = require("../supporting-content-model/supporting-content-model");
 
 const deleteDoctorsInfo = (doctorsId) => {
   const selectedDoctorsInfo = DoctorsInfo.filter((info) => info.doctorsId === doctorsId);
@@ -6,4 +7,9 @@ const deleteDoctorsInfo = (doctorsId) => {
   DoctorsInfo.splice(doctorsInfoIndex, 1);
 };
 
-module.exports = { deleteDoctorsInfo };
+const updateDoctorsHospitalInfo = (hospitalName) => {
+  DoctorsInfo.forEach((info) => {
+    info.hospital === hospitalName ? (info.hospital = SupportingContentModel.Unassigned) : "";
+  });
+};
+module.exports = { deleteDoctorsInfo, updateDoctorsHospitalInfo };
