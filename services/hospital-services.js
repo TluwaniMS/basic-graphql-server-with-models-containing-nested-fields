@@ -13,6 +13,8 @@ const deleteHospitalByHospitalKey = (args) => {
   const hospitalsIndex = Hospitals.indexOf(selecteHospital);
   updateDoctorsHospitalInfo(selecteHospital.hospitalName);
   Hospitals.splice(hospitalsIndex, 1);
+
+  return `operation completed successfully.`;
 };
 
 const updateHospitalsMunicipalKey = (municipalKey) => {

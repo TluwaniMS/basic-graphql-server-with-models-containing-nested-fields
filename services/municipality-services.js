@@ -16,6 +16,8 @@ const deleteMunicipalityByMunicipalKey = (args) => {
   const indexOfSelectedMunicipality = Municipalities.indexOf(selectedMunicipality);
   updateHospitalsMunicipalKey(args.municipalityKey);
   Municipalities.splice(indexOfSelectedMunicipality, 1);
+
+  return `operation completed successfully.`;
 };
 
 module.exports = {
