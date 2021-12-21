@@ -8,6 +8,7 @@ const {
 
 const { deleteDoctorMutation } = require("./mutations/doctors-mutations");
 const { deleteHospitalByHositalKeyMutation } = require("./mutations/hospitals-mutations");
+const { deleteMunicipalityByKeyMutation } = require("./mutations/municipalities-mutations");
 
 const Query = new GraphQLObjectType({
   name: "RootQuery",
@@ -25,7 +26,8 @@ const Mutation = new GraphQLObjectType({
   name: "Mutation",
   fields: {
     deleteDoctorById: deleteDoctorMutation,
-    deleteHospitalById: deleteHospitalByHositalKeyMutation
+    deleteHospitalById: deleteHospitalByHositalKeyMutation,
+    deleteMunicipalityByMunicipalKey: deleteMunicipalityByKeyMutation
   }
 });
 

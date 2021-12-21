@@ -1,6 +1,7 @@
 const { Hospitals } = require("../sample-data/hospitals-sample-data");
 const { Doctors } = require("../sample-data/doctors-sample-data");
 const { updateDoctorsHospitalInfo } = require("./doctors-info-service");
+const { SupportingContentModel } = require("../supporting-content-model/supporting-content-model");
 
 const getAllHospitals = () => Hospitals;
 const getHospital = (args) => Hospitals.filter((hospital) => hospital.hospitalKey === args.hospitalKey);
@@ -14,4 +15,16 @@ const deleteHospitalByHospitalKey = (args) => {
   Hospitals.splice(hospitalsIndex, 1);
 };
 
-module.exports = { getAllHospitals, getHospital, getDoctorsLinkedToHospital, deleteHospitalByHospitalKey };
+const updateHospitalsMunicipalKey = (municipalKey) => {
+  Hospitals.forEach((hospital) => {
+    hospital.municipality === municipalKey ? (hospital.municipality = SupportingContentModel.Unassigned) : "";
+  });
+};
+
+module.exports = {
+  getAllHospitals,
+  getHospital,
+  getDoctorsLinkedToHospital,
+  deleteHospitalByHospitalKey,
+  updateHospitalsMunicipalKey
+};
