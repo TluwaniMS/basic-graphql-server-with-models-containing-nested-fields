@@ -1,5 +1,5 @@
 const { DoctorsModel } = require("../models/doctors-model");
-const { GraphQLInt, GraphQLList, GraphQLObjectType, GraphQLNonNull } = require("graphql");
+const { GraphQLInt, GraphQLList, GraphQLNonNull } = require("graphql");
 const { getAllDoctors, getDoctorById } = require("../services/doctor-services");
 
 const getAllDoctorsQuery = {

@@ -1,4 +1,4 @@
-const { GraphQLString, GraphQLList, GraphQLObjectType, GraphQLNonNull } = require("graphql");
+const { GraphQLString, GraphQLList, GraphQLNonNull } = require("graphql");
 const { HospitalsModel } = require("../models/hospitals-model");
 const { getAllHospitals, getHospital } = require("../services/hospital-services");
 
