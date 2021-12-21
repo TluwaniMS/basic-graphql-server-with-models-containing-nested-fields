@@ -3,7 +3,7 @@ const { DoctorsInfo } = require("../sample-data/doctors-info-sample-data");
 const { deleteDoctorsInfo } = require("./doctors-info-service");
 
 const getAllDoctors = () => Doctors;
-const getDoctorById = (args) => Doctors.filter((doctor) => doctor.id === args.doctorsId);
+const getDoctorById = (args) => Doctors.filter((doctor) => doctor.id === args.doctorsId)[0];
 
 const getDoctorsInfoLinkedToDoctor = (doctorsId) => DoctorsInfo.filter((doctor) => doctor.doctorsId === doctorsId);
 
