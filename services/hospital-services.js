@@ -4,7 +4,7 @@ const { updateDoctorsHospitalInfo } = require("./doctors-info-service");
 const { SupportingContentModel } = require("../supporting-content-model/supporting-content-model");
 
 const getAllHospitals = () => Hospitals;
-const getHospital = (args) => Hospitals.filter((hospital) => hospital.hospitalKey === args.hospitalKey);
+const getHospital = (args) => Hospitals.filter((hospital) => hospital.hospitalKey === args.hospitalKey[0]);
 
 const getDoctorsLinkedToHospital = (hospitalKey) => Doctors.filter((doctor) => doctor.hospital === hospitalKey);
 
