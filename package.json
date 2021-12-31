@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TluwaniMS/basic-graphql-server-with-models-containing-nested-fields#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^16.1.0"
