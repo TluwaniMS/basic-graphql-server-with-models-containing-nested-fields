@@ -4,7 +4,7 @@ const { updateHospitalsMunicipalKey } = require("./hospital-services");
 
 const getAllMunicipalities = () => Municipalities;
 const getMunicipality = (args) =>
-  Municipalities.filter((municipality) => municipality.municipalityKey === args.municipalityKey);
+  Municipalities.filter((municipality) => municipality.municipalityKey === args.municipalityKey)[0];
 
 const getHospitalsLinkedToMunicipality = (municipalityKey) =>
   Hospitals.filter((hospital) => hospital.municipality === municipalityKey);
