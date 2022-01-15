@@ -6,3 +6,5 @@ const MunicipalitySchema = new Schema({
 });
 
 const Municipality = model("Municipalities", MunicipalitySchema);
+
+module.exports = { Municipality };

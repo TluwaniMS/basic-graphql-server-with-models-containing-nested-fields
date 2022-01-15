@@ -8,3 +8,5 @@ const DoctorSchema = new Schema({
 });
 
 const Doctor = model("Doctors", DoctorSchema);
+
+module.exports = { Doctor };

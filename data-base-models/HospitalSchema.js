@@ -6,3 +6,5 @@ const HospitalSchema = new Schema({
 });
 
 const Hospital = model("Hospitals", HospitalSchema);
+
+module.exports = { Hospital };
