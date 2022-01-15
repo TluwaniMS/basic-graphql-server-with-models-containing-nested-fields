@@ -5,6 +5,6 @@ const MunicipalitySchema = new Schema({
   municipalityKey: { type: String, required: true }
 });
 
-const Municipality = model("Municipalities", MunicipalitySchema);
+const Municipality = model("Municipality", MunicipalitySchema);
 
 module.exports = { Municipality };

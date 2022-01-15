@@ -7,6 +7,6 @@ const DoctorSchema = new Schema({
   email: { type: String, required: true }
 });
 
-const Doctor = model("Doctors", DoctorSchema);
+const Doctor = model("Doctor", DoctorSchema);
 
 module.exports = { Doctor };

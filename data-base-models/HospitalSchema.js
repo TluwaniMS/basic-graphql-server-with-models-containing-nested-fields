@@ -5,6 +5,6 @@ const HospitalSchema = new Schema({
   hospitalKey: { type: String, required: true }
 });
 
-const Hospital = model("Hospitals", HospitalSchema);
+const Hospital = model("Hospital", HospitalSchema);
 
 module.exports = { Hospital };
