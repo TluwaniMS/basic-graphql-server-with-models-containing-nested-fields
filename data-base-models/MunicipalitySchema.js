@@ -1,3 +1,6 @@
 const { Mongoose, Schema } = require("mongoose");
 
-const MunicipalitySchema = new Schema({});
+const MunicipalitySchema = new Schema({
+  municipalityName: { type: String, required: true },
+  municipalityKey: { type: String, required: true }
+});
