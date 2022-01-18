@@ -5,7 +5,7 @@ const { deleteDoctorsInfo } = require("./doctors-info-service");
 const getAllDoctors = () => Doctors;
 const getDoctorById = (args) => Doctors.filter((doctor) => doctor.id === args.doctorsId)[0];
 
-const getDoctorsInfoLinkedToDoctor = (doctorsId) => DoctorsInfo.filter((doctor) => doctor.doctorsId === doctorsId);
+const getDoctorsInfoLinkedToDoctor = (doctorsId) => DoctorsInfo.filter((doctor) => doctor.doctorsId === doctorsId)[0];
 
 const deleteDoctorById = (args) => {
   const selectedDoctor = Doctors.filter((doctor) => doctor.id === args.doctorsId)[0];

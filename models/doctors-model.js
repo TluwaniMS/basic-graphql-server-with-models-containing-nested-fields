@@ -12,7 +12,7 @@ const DoctorsModel = new GraphQLObjectType({
     email: { type: new GraphQLNonNull(GraphQLString) },
     hospital: { type: new GraphQLNonNull(GraphQLString) },
     info: {
-      type: new GraphQLList(DoctorsInfoModel),
+      type: DoctorsInfoModel,
       resolve(parent, args) {
         return getDoctorsInfoLinkedToDoctor(parent.id);
       }
