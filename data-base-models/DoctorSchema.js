@@ -1,4 +1,5 @@
 const { model, Schema } = require("mongoose");
+const { DoctorInfoSchema } = require("./DoctorInfoSchema");
 
 const DoctorSchema = new Schema({
   firstName: { type: String, required: true },
@@ -6,10 +7,7 @@ const DoctorSchema = new Schema({
   gender: { type: String, required: true },
   email: { type: String, required: true },
   hospital: { type: String, required: true },
-  info: {
-    type: Schema.Types.ObjectId,
-    ref: "DoctorsInfo"
-  }
+  info: DoctorInfoSchema
 });
 
 const Doctor = model("Doctor", DoctorSchema);
