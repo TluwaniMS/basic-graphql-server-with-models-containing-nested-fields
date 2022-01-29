@@ -1,6 +1,6 @@
 const Doctors = [
   {
-    id: "61f58a1d2f87a0e538236b25",
+    _id: "61f58a1d2f87a0e538236b25",
     firstName: "Dean",
     lastName: "Hill",
     gender: "Male",
@@ -12,7 +12,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58a1d2f87a0e538236b26",
+    _id: "61f58a1d2f87a0e538236b26",
     firstName: "Lufuno",
     lastName: "Sekgothe",
     gender: "Female",
@@ -24,7 +24,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58a1d2f87a0e538236b27",
+    _id: "61f58a1d2f87a0e538236b27",
     firstName: "Refilwe",
     lastName: "Phago",
     gender: "Female",
@@ -36,7 +36,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58a1d2f87a0e538236b28",
+    _id: "61f58a1d2f87a0e538236b28",
     firstName: "Seba",
     lastName: "Sibika",
     gender: "Female",
@@ -48,7 +48,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58a1d2f87a0e538236b29",
+    _id: "61f58a1d2f87a0e538236b29",
     firstName: "Katlego",
     lastName: "Mamani",
     gender: "Female",
@@ -60,7 +60,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58a1d2f87a0e538236b2a",
+    _id: "61f58a1d2f87a0e538236b2a",
     firstName: "Idah",
     lastName: "Leseme",
     gender: "Female",
@@ -72,7 +72,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58a1d2f87a0e538236b2b",
+    _id: "61f58a1d2f87a0e538236b2b",
     firstName: "Jessica",
     lastName: "Shadung",
     gender: "Female",
@@ -84,7 +84,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58a1d2f87a0e538236b2c",
+    _id: "61f58a1d2f87a0e538236b2c",
     firstName: "Tshego",
     lastName: "Seoka",
     gender: "Male",
@@ -96,7 +96,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58a1d2f87a0e538236b2d",
+    _id: "61f58a1d2f87a0e538236b2d",
     firstName: "Jethro",
     lastName: "Mokgohloa",
     gender: "Male",
@@ -108,7 +108,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58a1d2f87a0e538236b2e",
+    _id: "61f58a1d2f87a0e538236b2e",
     firstName: "Kgaogelo",
     lastName: "Munyangane",
     gender: "Female",
@@ -120,7 +120,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb237",
+    _id: "61f58abe03175729b2ffb237",
     firstName: "Mmadi",
     lastName: "Ndlovu",
     gender: "Male",
@@ -132,7 +132,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb238",
+    _id: "61f58abe03175729b2ffb238",
     firstName: "Abigail",
     lastName: "Sekhosana",
     gender: "Female",
@@ -144,7 +144,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb239",
+    _id: "61f58abe03175729b2ffb239",
     firstName: "Mmakosha",
     lastName: "Deagrela",
     gender: "Female",
@@ -156,7 +156,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb23a",
+    _id: "61f58abe03175729b2ffb23a",
     firstName: "Dorcus",
     lastName: "Maruma",
     gender: "Female",
@@ -168,7 +168,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb23b",
+    _id: "61f58abe03175729b2ffb23b",
     firstName: "Denzel",
     lastName: "Mophosho",
     gender: "Male",
@@ -180,7 +180,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb23c",
+    _id: "61f58abe03175729b2ffb23c",
     firstName: "Lerato",
     lastName: "Sehume",
     gender: "Female",
@@ -192,7 +192,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb23d",
+    _id: "61f58abe03175729b2ffb23d",
     firstName: "Londokuhle",
     lastName: "Ndala",
     gender: "Male",
@@ -204,7 +204,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb23e",
+    _id: "61f58abe03175729b2ffb23e",
     firstName: "Thovhedzo",
     lastName: "Maosa",
     gender: "Male",
@@ -216,7 +216,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb23f",
+    _id: "61f58abe03175729b2ffb23f",
     firstName: "Reneilwe",
     lastName: "Dikana",
     gender: "Female",
@@ -228,7 +228,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58abe03175729b2ffb240",
+    _id: "61f58abe03175729b2ffb240",
     firstName: "Philicia",
     lastName: "Sothobe",
     gender: "Female",
@@ -240,7 +240,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58b1d7721a4ec976894e3",
+    _id: "61f58b1d7721a4ec976894e3",
     firstName: "Eddy",
     lastName: "Manaka",
     gender: "Male",
@@ -252,7 +252,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58b1d7721a4ec976894e4",
+    _id: "61f58b1d7721a4ec976894e4",
     firstName: "Mathibela",
     lastName: "Serumula",
     gender: "Male",
@@ -264,7 +264,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58b1d7721a4ec976894e5",
+    _id: "61f58b1d7721a4ec976894e5",
     firstName: "Mpho",
     lastName: "Leshabane",
     gender: "Male",
@@ -276,7 +276,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58b1d7721a4ec976894e6",
+    _id: "61f58b1d7721a4ec976894e6",
     firstName: "Lehlohonolo",
     lastName: "Sebata",
     gender: "Male",
@@ -288,7 +288,7 @@ const Doctors = [
     }
   },
   {
-    id: "61f58b1d7721a4ec976894e7",
+    _id: "61f58b1d7721a4ec976894e7",
     firstName: "Mpumi",
     lastName: "Khoza",
     gender: "Male",
