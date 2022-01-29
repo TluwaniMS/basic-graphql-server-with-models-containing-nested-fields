@@ -1,4 +1,4 @@
-const Doctors = [
+const Doctors = () => [
   {
     _id: "61f58a1d2f87a0e538236b25",
     firstName: "Dean",

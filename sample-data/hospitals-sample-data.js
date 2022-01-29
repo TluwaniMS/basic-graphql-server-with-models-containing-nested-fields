@@ -1,4 +1,4 @@
-const Hospitals = [
+const Hospitals = () => [
   {
     _id: "61f599cc78ae6fc7b38a6bad",
     hospitalName: "Sekhukhune Private Hospital",
