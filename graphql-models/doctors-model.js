@@ -4,7 +4,7 @@ const { DoctorsInfoModel } = require("./doctors-info-model");
 const DoctorsModel = new GraphQLObjectType({
   name: "Doctor",
   fields: () => ({
-    id: { type: new GraphQLNonNull(GraphQLString) },
+    _id: { type: new GraphQLNonNull(GraphQLString) },
     firstName: { type: new GraphQLNonNull(GraphQLString) },
     lastName: { type: new GraphQLNonNull(GraphQLString) },
     gender: { type: new GraphQLNonNull(GraphQLString) },
