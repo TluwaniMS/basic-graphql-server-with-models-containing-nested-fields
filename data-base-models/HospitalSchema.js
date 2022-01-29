@@ -7,6 +7,6 @@ const HospitalSchema = new Schema({
   doctors: { type: Schema.Types.ObjectId, ref: "Doctor" }
 });
 
-const Hospital = model("Hospital", HospitalSchema);
+const HospitalModel = model("Hospital", HospitalSchema);
 
-module.exports = { Hospital };
+module.exports = { HospitalModel };

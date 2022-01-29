@@ -10,6 +10,6 @@ const DoctorSchema = new Schema({
   info: DoctorInfoSchema
 });
 
-const Doctor = model("Doctor", DoctorSchema);
+const DoctorModel = model("Doctor", DoctorSchema);
 
-module.exports = { Doctor };
+module.exports = { DoctorModel };

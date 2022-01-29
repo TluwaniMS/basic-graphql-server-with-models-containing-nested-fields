@@ -6,6 +6,6 @@ const MunicipalitySchema = new Schema({
   hospitals: { type: Schema.Types.ObjectId, ref: "Hospital" }
 });
 
-const Municipality = model("Municipality", MunicipalitySchema);
+const MunicipalityModel = model("Municipality", MunicipalitySchema);
 
-module.exports = { Municipality };
+module.exports = { MunicipalityModel };
