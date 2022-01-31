@@ -14,6 +14,5 @@ const DoctorSchema = new Schema({
 });
 
 const DoctorModel = model("Doctor", DoctorSchema);
-const DoctorTC = composeWithMongoose("Doctor", DoctorSchema);
 
-module.exports = { DoctorModel, DoctorTC };
+module.exports = { DoctorModel };

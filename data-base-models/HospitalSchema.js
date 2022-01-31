@@ -9,6 +9,5 @@ const HospitalSchema = new Schema({
 });
 
 const HospitalModel = model("Hospital", HospitalSchema);
-const HospitalTC = composeWithMongoose("Hospital", HospitalSchema);
 
-module.exports = { HospitalModel, HospitalTC };
+module.exports = { HospitalModel };

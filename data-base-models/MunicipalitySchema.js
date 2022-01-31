@@ -8,6 +8,5 @@ const MunicipalitySchema = new Schema({
 });
 
 const MunicipalityModel = model("Municipality", MunicipalitySchema);
-const MunicipalityTC = composeWithMongoose("Municipality", MunicipalitySchema);
 
 module.exports = { MunicipalityModel, MunicipalityTC };
