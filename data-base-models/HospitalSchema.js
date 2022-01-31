@@ -1,4 +1,5 @@
 const { model, Schema } = require("mongoose");
+const { composeWithMongoose } = require("graphql-compose-mongoose");
 
 const HospitalSchema = new Schema({
   hospitalName: { type: String, required: true },
@@ -8,5 +9,6 @@ const HospitalSchema = new Schema({
 });
 
 const HospitalModel = model("Hospital", HospitalSchema);
+const HospitalTC = composeWithMongoose("Hospital", HospitalSchema);
 
-module.exports = { HospitalModel };
+module.exports = { HospitalModel, HospitalTC };

@@ -1,4 +1,5 @@
 const { model, Schema } = require("mongoose");
+const { composeWithMongoose } = require("graphql-compose-mongoose");
 
 const MunicipalitySchema = new Schema({
   municipalityName: { type: String, required: true },
@@ -7,5 +8,6 @@ const MunicipalitySchema = new Schema({
 });
 
 const MunicipalityModel = model("Municipality", MunicipalitySchema);
+const MunicipalityTC = composeWithMongoose("Municipality", MunicipalitySchema);
 
-module.exports = { MunicipalityModel };
+module.exports = { MunicipalityModel, MunicipalityTC };
