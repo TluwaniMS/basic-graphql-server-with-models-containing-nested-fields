@@ -1,8 +1,22 @@
-const { DoctorTC } = require("../data-base-models/DoctorSchema");
+const { DoctorsModel } = require("../models/doctors-model");
+const { GraphQLInt, GraphQLList, GraphQLNonNull } = require("graphql");
+const { getAllDoctors, getDoctorById } = require("../services/doctor-services");
 
-const DoctorQueries = {
-  getAllDoctors: DoctorTC.getResolver("findMany"),
-  getDoctorById: DoctorTC.getResolver("findById")
+const getAllDoctorsQuery = {
+  type: new GraphQLList(DoctorsModel),
+  resolve(parent, args) {
+    return getAllDoctors();
+  }
 };
 
-module.exports = { DoctorQueries };
+const getDoctorByIdQuery = {
+  type: DoctorsModel,
+  args: {
+    doctorsId: { type: new GraphQLNonNull(GraphQLInt) }
+  },
+  resolve(parent, args) {
+    return getDoctorById(args);
+  }
+};
+
+module.exports = { getAllDoctorsQuery, getDoctorByIdQuery };

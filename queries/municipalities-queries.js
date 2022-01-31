@@ -1,8 +1,22 @@
-const { MunicipalityTC } = require("../data-base-models/MunicipalitySchema");
+const { GraphQLString, GraphQLList, GraphQLNonNull } = require("graphql");
+const { MunicipalitiesModel } = require("../models/municipalities-model");
+const { getMunicipality, getAllMunicipalities } = require("../services/municipality-services");
 
-const MunicipalityQueries = {
-  getAllMunicipalities: MunicipalityTC.getResolver("findMany"),
-  getMunicipalityById: MunicipalityTC.getResolver("findById")
+const getAllMunicipalitiesQuery = {
+  type: new GraphQLList(MunicipalitiesModel),
+  resolve(parent, args) {
+    return getAllMunicipalities();
+  }
 };
 
-module.exports = { MunicipalityQueries };
+const getMunicipalityByMunicipalityKeyQuery = {
+  type: MunicipalitiesModel,
+  args: {
+    municipalityKey: { type: new GraphQLNonNull(GraphQLString) }
+  },
+  resolve(parent, args) {
+    return getMunicipality(args);
+  }
+};
+
+module.exports = { getAllMunicipalitiesQuery, getMunicipalityByMunicipalityKeyQuery };
