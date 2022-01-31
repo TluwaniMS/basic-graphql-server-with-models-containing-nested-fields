@@ -39,4 +39,11 @@ const createObjectWithLinkedDoctorAndHospitalsId = (hospitalId, arrayWithDoctorI
   return arrayWithLinkedDoctorAndHospitalIds;
 };
 
-module.exports = { mainFunctionForLinkingDoctorsAndHospitalIdsThatAreRelated };
+const extractHospitalById = (hospitalId) => {
+  const sampleHospitals = Hospitals();
+  const selectedHospital = sampleHospitals.filter((hospital) => hospital._id === hospitalId);
+
+  return selectedHospital[0];
+};
+
+module.exports = { mainFunctionForLinkingDoctorsAndHospitalIdsThatAreRelated, extractHospitalById };
