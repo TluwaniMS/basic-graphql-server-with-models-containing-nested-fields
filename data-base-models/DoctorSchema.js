@@ -1,5 +1,4 @@
 const { model, Schema } = require("mongoose");
-const { DoctorInfoSchema } = require("./DoctorInfoSchema");
 
 const DoctorSchema = new Schema({
   firstName: { type: String, required: true },
@@ -7,7 +6,10 @@ const DoctorSchema = new Schema({
   gender: { type: String, required: true },
   email: { type: String, required: true },
   hospital: { type: String, required: true },
-  info: DoctorInfoSchema
+  info: {
+    specialty: { type: String, required: true },
+    hospital: { type: String, required: true }
+  }
 });
 
 const DoctorModel = model("Doctor", DoctorSchema);
