@@ -1,5 +1,4 @@
 const { model, Schema } = require("mongoose");
-const { composeWithMongoose } = require("graphql-compose-mongoose");
 
 const DoctorSchema = new Schema({
   firstName: { type: String, required: true },
