@@ -9,7 +9,7 @@ const getAllHospitalsQuery = {
   }
 };
 
-const getHospitalByHospitalKeyQuery = {
+const getHospitalByHospitalIdQuery = {
   type: HospitalsModel,
   args: {
     _id: { type: new GraphQLNonNull(GraphQLString) }
@@ -19,4 +19,4 @@ const getHospitalByHospitalKeyQuery = {
   }
 };
 
-module.exports = { getAllHospitalsQuery, getHospitalByHospitalKeyQuery };
+module.exports = { getAllHospitalsQuery, getHospitalByHospitalIdQuery };

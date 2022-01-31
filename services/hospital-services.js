@@ -12,7 +12,7 @@ const getHospital = async (args) => {
   return hospital;
 };
 
-const deleteHospitalByHospitalKey = async (args) => {
+const deleteHospitalByHospitalId = async (args) => {
   await HospitalModel.deleteOne({ _id: args._id });
 
   return `operation completed successfully.`;
@@ -21,5 +21,5 @@ const deleteHospitalByHospitalKey = async (args) => {
 module.exports = {
   getAllHospitals,
   getHospital,
-  deleteHospitalByHospitalKey
+  deleteHospitalByHospitalId
 };

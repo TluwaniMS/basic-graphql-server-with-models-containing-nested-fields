@@ -9,7 +9,7 @@ const getAllMunicipalitiesQuery = {
   }
 };
 
-const getMunicipalityByMunicipalityKeyQuery = {
+const getMunicipalityByIdQuery = {
   type: MunicipalitiesModel,
   args: {
     _id: { type: new GraphQLNonNull(GraphQLString) }
@@ -19,4 +19,4 @@ const getMunicipalityByMunicipalityKeyQuery = {
   }
 };
 
-module.exports = { getAllMunicipalitiesQuery, getMunicipalityByMunicipalityKeyQuery };
+module.exports = { getAllMunicipalitiesQuery, getMunicipalityByIdQuery };

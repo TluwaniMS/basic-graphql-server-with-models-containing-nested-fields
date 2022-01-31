@@ -12,7 +12,7 @@ const getMunicipality = async (args) => {
   return municipality;
 };
 
-const deleteMunicipalityByMunicipalKey = async (args) => {
+const deleteMunicipalityByMunicipalId = async (args) => {
   await MunicipalityModel.deleteOne({ _id: args._id });
 
   return `operation completed successfully.`;
@@ -21,5 +21,5 @@ const deleteMunicipalityByMunicipalKey = async (args) => {
 module.exports = {
   getAllMunicipalities,
   getMunicipality,
-  deleteMunicipalityByMunicipalKey
+  deleteMunicipalityByMunicipalId
 };

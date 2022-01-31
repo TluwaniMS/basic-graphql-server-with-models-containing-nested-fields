@@ -1,14 +1,11 @@
 const { GraphQLObjectType, GraphQLSchema } = require("graphql");
 const { getAllDoctorsQuery, getDoctorByIdQuery } = require("./queries/doctors-queries");
-const { getAllHospitalsQuery, getHospitalByHospitalKeyQuery } = require("./queries/hospitals-queries");
-const {
-  getAllMunicipalitiesQuery,
-  getMunicipalityByMunicipalityKeyQuery
-} = require("./queries/municipalities-queries");
+const { getAllHospitalsQuery, getHospitalByHospitalIdQuery } = require("./queries/hospitals-queries");
+const { getAllMunicipalitiesQuery, getMunicipalityByIdQuery } = require("./queries/municipalities-queries");
 
 const { deleteDoctorMutation } = require("./mutations/doctors-mutations");
-const { deleteHospitalByHositalKeyMutation } = require("./mutations/hospitals-mutations");
-const { deleteMunicipalityByKeyMutation } = require("./mutations/municipalities-mutations");
+const { deleteHospitalByHositalIdMutation } = require("./mutations/hospitals-mutations");
+const { deleteMunicipalityByIdMutation } = require("./mutations/municipalities-mutations");
 
 const Query = new GraphQLObjectType({
   name: "RootQuery",
@@ -16,9 +13,9 @@ const Query = new GraphQLObjectType({
     getAllDoctors: getAllDoctorsQuery,
     getDoctorById: getDoctorByIdQuery,
     getAllHospitals: getAllHospitalsQuery,
-    getHospitalByHospitalKey: getHospitalByHospitalKeyQuery,
+    getHospitalByHospitalById: getHospitalByHospitalIdQuery,
     getAllMunicipalities: getAllMunicipalitiesQuery,
-    getMunicipalityByMunicipalityKey: getMunicipalityByMunicipalityKeyQuery
+    getMunicipalityByMunicipalityId: getMunicipalityByIdQuery
   }
 });
 
@@ -26,8 +23,8 @@ const Mutation = new GraphQLObjectType({
   name: "Mutation",
   fields: {
     deleteDoctorById: deleteDoctorMutation,
-    deleteHospitalById: deleteHospitalByHositalKeyMutation,
-    deleteMunicipalityByMunicipalKey: deleteMunicipalityByKeyMutation
+    deleteHospitalById: deleteHospitalByHositalIdMutation,
+    deleteMunicipalityByMunicipalId: deleteMunicipalityByIdMutation
   }
 });
 

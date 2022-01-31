@@ -1,14 +1,14 @@
 const { GraphQLString, GraphQLNonNull } = require("graphql");
-const { deleteMunicipalityByMunicipalKey } = require("../services/municipality-services");
+const { deleteMunicipalityByMunicipalId } = require("../services/municipality-services");
 
-const deleteMunicipalityByKeyMutation = {
+const deleteMunicipalityByIdMutation = {
   type: GraphQLString,
   args: {
     municipalityKey: { type: new GraphQLNonNull(GraphQLString) }
   },
   resolve(parent, args) {
-    return deleteMunicipalityByMunicipalKey(args);
+    return deleteMunicipalityByMunicipalId(args);
   }
 };
 
-module.exports = { deleteMunicipalityByKeyMutation };
+module.exports = { deleteMunicipalityByIdMutation };
