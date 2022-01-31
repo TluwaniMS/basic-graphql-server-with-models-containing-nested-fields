@@ -1,4 +1,4 @@
-const { connect, disconnect } = require("mongoose");
+const { connect } = require("mongoose");
 
 const dataBaseURL = process.env.MONGO_URL || "mongodb://localhost:27017/doctors_directory";
 const connectionOptions = { useNewUrlParser: true, useUnifiedTopology: true };
@@ -13,9 +13,4 @@ async function connectToDataBase() {
     });
 }
 
-async function disconnectDatabase() {
-  console.log(`Please wait while the database disconnects.`);
-  disconnect();
-  console.log(`Database has been disconnected successfully...`);
-}
-module.exports = { connectToDataBase, disconnectDatabase };
+module.exports = { connectToDataBase };
