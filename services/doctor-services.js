@@ -1,19 +1,21 @@
-const { Doctors } = require("../sample-data/doctors-sample-data");
-const { DoctorsInfo } = require("../sample-data/doctors-info-sample-data");
-const { deleteDoctorsInfo } = require("./doctors-info-service");
+const { DoctorModel } = require("../data-base-models/DoctorSchema");
 
-const getAllDoctors = () => Doctors;
-const getDoctorById = (args) => Doctors.filter((doctor) => doctor.id === args.doctorsId)[0];
+const getAllDoctors = async () => {
+  const doctors = await DoctorModel.find({});
 
-const getDoctorsInfoLinkedToDoctor = (doctorsId) => DoctorsInfo.filter((doctor) => doctor.doctorsId === doctorsId)[0];
+  return doctors;
+};
 
-const deleteDoctorById = (args) => {
-  const selectedDoctor = Doctors.filter((doctor) => doctor.id === args.doctorsId)[0];
-  const doctorsIndex = Doctors.indexOf(selectedDoctor);
-  deleteDoctorsInfo(args.doctorsId);
-  Doctors.splice(doctorsIndex, 1);
+const getDoctorById = async (args) => {
+  const doctor = await DoctorModel.findOne({ _id: args._id });
+
+  return doctor;
+};
+
+const deleteDoctorById = async (args) => {
+  await DoctorModel.deleteOne({ _id: args._id });
 
   return `operation completed successfully.`;
 };
 
-module.exports = { getAllDoctors, getDoctorById, getDoctorsInfoLinkedToDoctor, deleteDoctorById };
+module.exports = { getAllDoctors, getDoctorById, deleteDoctorById };

@@ -1,32 +1,25 @@
-const { Hospitals } = require("../sample-data/hospitals-sample-data");
-const { Doctors } = require("../sample-data/doctors-sample-data");
-const { updateDoctorsHospitalInfo } = require("./doctors-info-service");
-const { SupportingContentModel } = require("../supporting-content-model/supporting-content-model");
+const { HospitalModel } = require("../data-base-models/HospitalSchema");
 
-const getAllHospitals = () => Hospitals;
-const getHospital = (args) => Hospitals.filter((hospital) => hospital.hospitalKey === args.hospitalKey)[0];
+const getAllHospitals = async () => {
+  const hospitals = await HospitalModel.find({}).populate("doctors");
 
-const getDoctorsLinkedToHospital = (hospitalKey) => Doctors.filter((doctor) => doctor.hospital === hospitalKey);
 
-const deleteHospitalByHospitalKey = (args) => {
-  const selecteHospital = Hospitals.filter((hospital) => hospital.hospitalKey === args.hospitalKey)[0];
-  const hospitalsIndex = Hospitals.indexOf(selecteHospital);
-  updateDoctorsHospitalInfo(selecteHospital.hospitalName);
-  Hospitals.splice(hospitalsIndex, 1);
+  return hospitals;
+};
+const getHospital = async (args) => {
+  const hospital = await HospitalModel.findOne({ _id: args._id }).populate("doctors");
 
-  return `operation completed successfully.`;
+  return hospital;
 };
 
-const updateHospitalsMunicipalKey = (municipalKey) => {
-  Hospitals.forEach((hospital) => {
-    hospital.municipality === municipalKey ? (hospital.municipality = SupportingContentModel.Unassigned) : "";
-  });
+const deleteHospitalByHospitalKey = async (args) => {
+  await HospitalModel.deleteOne({ _id: args._id });
+
+  return `operation completed successfully.`;
 };
 
 module.exports = {
   getAllHospitals,
   getHospital,
-  getDoctorsLinkedToHospital,
-  deleteHospitalByHospitalKey,
-  updateHospitalsMunicipalKey
+  deleteHospitalByHospitalKey
 };

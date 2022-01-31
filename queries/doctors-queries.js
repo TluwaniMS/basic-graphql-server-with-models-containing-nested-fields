@@ -1,5 +1,5 @@
-const { DoctorsModel } = require("../models/doctors-model");
-const { GraphQLInt, GraphQLList, GraphQLNonNull } = require("graphql");
+const { DoctorsModel } = require("../graphql-models/doctors-model");
+const { GraphQLString, GraphQLList, GraphQLNonNull } = require("graphql");
 const { getAllDoctors, getDoctorById } = require("../services/doctor-services");
 
 const getAllDoctorsQuery = {
@@ -12,7 +12,7 @@ const getAllDoctorsQuery = {
 const getDoctorByIdQuery = {
   type: DoctorsModel,
   args: {
-    doctorsId: { type: new GraphQLNonNull(GraphQLInt) }
+    _id: { type: new GraphQLNonNull(GraphQLString) }
   },
   resolve(parent, args) {
     return getDoctorById(args);

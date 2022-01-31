@@ -1,21 +1,19 @@
-const { Municipalities } = require("../sample-data/municipalities-sample-data");
-const { Hospitals } = require("../sample-data/hospitals-sample-data");
-const { updateHospitalsMunicipalKey } = require("./hospital-services");
+const { MunicipalityModel } = require("../data-base-models/MunicipalitySchema");
 
-const getAllMunicipalities = () => Municipalities;
-const getMunicipality = (args) =>
-  Municipalities.filter((municipality) => municipality.municipalityKey === args.municipalityKey)[0];
+const getAllMunicipalities = async () => {
+  const municipalities = await MunicipalityModel.find({}).populate("hospitals");
 
-const getHospitalsLinkedToMunicipality = (municipalityKey) =>
-  Hospitals.filter((hospital) => hospital.municipality === municipalityKey);
+  return municipalities;
+};
 
-const deleteMunicipalityByMunicipalKey = (args) => {
-  const selectedMunicipality = Municipalities.filter(
-    (municipality) => municipality.municipalityKey === args.municipalityKey
-  )[0];
-  const indexOfSelectedMunicipality = Municipalities.indexOf(selectedMunicipality);
-  updateHospitalsMunicipalKey(args.municipalityKey);
-  Municipalities.splice(indexOfSelectedMunicipality, 1);
+const getMunicipality = async (args) => {
+  const municipality = await MunicipalityModel.findOne({ _id: args._id }).populate("hospitals");
+
+  return municipality;
+};
+
+const deleteMunicipalityByMunicipalKey = async (args) => {
+  await MunicipalityModel.deleteOne({ _id: args._id });
 
   return `operation completed successfully.`;
 };
@@ -23,6 +21,5 @@ const deleteMunicipalityByMunicipalKey = (args) => {
 module.exports = {
   getAllMunicipalities,
   getMunicipality,
-  getHospitalsLinkedToMunicipality,
   deleteMunicipalityByMunicipalKey
 };

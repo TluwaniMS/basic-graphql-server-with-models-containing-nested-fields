@@ -1,5 +1,5 @@
 const { GraphQLString, GraphQLList, GraphQLNonNull } = require("graphql");
-const { MunicipalitiesModel } = require("../models/municipalities-model");
+const { MunicipalitiesModel } = require("../graphql-models/municipalities-model");
 const { getMunicipality, getAllMunicipalities } = require("../services/municipality-services");
 
 const getAllMunicipalitiesQuery = {
@@ -12,7 +12,7 @@ const getAllMunicipalitiesQuery = {
 const getMunicipalityByMunicipalityKeyQuery = {
   type: MunicipalitiesModel,
   args: {
-    municipalityKey: { type: new GraphQLNonNull(GraphQLString) }
+    _id: { type: new GraphQLNonNull(GraphQLString) }
   },
   resolve(parent, args) {
     return getMunicipality(args);

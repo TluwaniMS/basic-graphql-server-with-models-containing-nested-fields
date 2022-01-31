@@ -1,5 +1,5 @@
 const { GraphQLString, GraphQLList, GraphQLNonNull } = require("graphql");
-const { HospitalsModel } = require("../models/hospitals-model");
+const { HospitalsModel } = require("../graphql-models/hospitals-model");
 const { getAllHospitals, getHospital } = require("../services/hospital-services");
 
 const getAllHospitalsQuery = {
@@ -12,7 +12,7 @@ const getAllHospitalsQuery = {
 const getHospitalByHospitalKeyQuery = {
   type: HospitalsModel,
   args: {
-    hospitalKey: { type: new GraphQLNonNull(GraphQLString) }
+    _id: { type: new GraphQLNonNull(GraphQLString) }
   },
   resolve(parent, args) {
     return getHospital(args);
