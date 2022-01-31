@@ -4,7 +4,7 @@ const { deleteMunicipalityByMunicipalId } = require("../services/municipality-se
 const deleteMunicipalityByIdMutation = {
   type: GraphQLString,
   args: {
-    municipalityKey: { type: new GraphQLNonNull(GraphQLString) }
+    _id: { type: new GraphQLNonNull(GraphQLString) }
   },
   resolve(parent, args) {
     return deleteMunicipalityByMunicipalId(args);
