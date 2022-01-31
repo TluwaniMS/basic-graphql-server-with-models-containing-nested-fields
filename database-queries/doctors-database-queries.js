@@ -8,6 +8,12 @@ const createSampleDoctors = async () => {
   console.log(`sample doctors created successfully...`);
 };
 
+const findAllDoctors = async () => {
+  const doctors = await DoctorModel.find({});
+
+  return doctors;
+};
 module.exports = {
-  createSampleDoctors
+  createSampleDoctors,
+  findAllDoctors
 };
