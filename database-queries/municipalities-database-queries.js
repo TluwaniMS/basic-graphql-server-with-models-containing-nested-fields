@@ -18,4 +18,4 @@ const createLinksBetweenMunicipalitiesAndHospitals = async () => {
   });
 };
 
-module.exports = { createSampleMunicipalities };
+module.exports = { createSampleMunicipalities, createLinksBetweenMunicipalitiesAndHospitals };
