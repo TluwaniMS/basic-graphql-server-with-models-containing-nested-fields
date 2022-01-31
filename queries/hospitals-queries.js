@@ -1,22 +1,8 @@
-const { GraphQLString, GraphQLList, GraphQLNonNull } = require("graphql");
-const { HospitalsModel } = require("../models/hospitals-model");
-const { getAllHospitals, getHospital } = require("../services/hospital-services");
+const { HospitalTC } = require("../data-base-models/HospitalSchema");
 
-const getAllHospitalsQuery = {
-  type: new GraphQLList(HospitalsModel),
-  resolve(parent, args) {
-    return getAllHospitals();
-  }
+const HospitalQueries = {
+  getAllHospitals: HospitalTC.getResolver("findMany"),
+  getHospitalById: HospitalTC.getResolver("findById")
 };
 
-const getHospitalByHospitalKeyQuery = {
-  type: HospitalsModel,
-  args: {
-    hospitalKey: { type: new GraphQLNonNull(GraphQLString) }
-  },
-  resolve(parent, args) {
-    return getHospital(args);
-  }
-};
-
-module.exports = { getAllHospitalsQuery, getHospitalByHospitalKeyQuery };
+module.exports = { HospitalQueries };
