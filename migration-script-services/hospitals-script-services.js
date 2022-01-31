@@ -7,7 +7,7 @@ const mainFunctionForLinkingDoctorsAndHospitalIdsThatAreRelated = () => {
   const arrayWithObjectContainingLinkedHospitalAndDoctorIds = [];
 
   hospitals.forEach((hospital) => {
-    const doctorsLinkedToHospitals = extractDoctorsLinkedToHospital(hospitalKey, doctors);
+    const doctorsLinkedToHospitals = extractDoctorsLinkedToHospital(hospital.hospitalKey, doctors);
     const doctorsIds = extractDoctorIdsOfDoctorsLinkedToHospital(doctorsLinkedToHospitals);
     const objectWithLinkedHospitalAndDoctorIds = createObjectWithLinkedDoctorAndHospitalsId(hospital._id, doctorsIds);
 
