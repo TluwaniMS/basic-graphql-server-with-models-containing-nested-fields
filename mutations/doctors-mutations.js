@@ -4,7 +4,7 @@ const { deleteDoctorById } = require("../services/doctor-services");
 const deleteDoctorMutation = {
   type: GraphQLString,
   args: {
-    _id: { type: new GraphQLNonNull(GraphQLInt) }
+    _id: { type: new GraphQLNonNull(GraphQLString) }
   },
   resolve(parent, args) {
     return deleteDoctorById(args);
