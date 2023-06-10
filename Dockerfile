@@ -4,4 +4,4 @@ COPY package.json yarn.lock ./
 RUN yarn install
 COPY . .
 CMD ["node", "server.js"]
-EXPOSE 5000
+EXPOSE 5002
