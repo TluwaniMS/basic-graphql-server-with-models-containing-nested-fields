@@ -1,6 +1,11 @@
-const { connect } = require("mongoose");
+const { connect } = require('mongoose');
+const dotenv = require('dotenv');
 
-const dataBaseURL = process.env.MONGO_URL || "mongodb://localhost:27017/doctors_directory";
+dotenv.config();
+
+const databaseHost = process.env.DATABASE_HOST || 'localhost';
+
+const dataBaseURL = `mongodb://${databaseHost}:27017/doctors_directory`;
 const connectionOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 
 async function connectToDataBase() {
